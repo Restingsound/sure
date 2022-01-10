@@ -28,11 +28,11 @@ const App = () => {
   return (
     <div>
       <TitleContainer>
-        <img alt="sure logo" src="images/sure_white.svg" />
+        <img alt="sure logo" src="sure/images/sure_white.svg" />
         <TaglineContainer>
           <h2>
             Insure your Rocket with Sure{" "}
-            <img width="40" alt="rocket" src="images/rocket.svg" />
+            <img width="40" alt="rocket" src="sure/images/rocket.svg" />
           </h2>
         </TaglineContainer>
       </TitleContainer>
