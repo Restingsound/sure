@@ -1,0 +1,23 @@
+PUT https://fed-challenge-api.sure.now.sh/api/v1/quotes/UP7757875
+Content-Type: application/json
+
+{
+    "quote": {
+        "quoteId": "UP7757875",
+        "rating_address": {
+            "line_1": "123 Mulberry Lane",
+            "line_2": "3B",
+            "city": "Brooklyn",
+            "region": "NY",
+            "postal": "11211"
+        },
+        "policy_holder": {
+            "first_name": "Prairie",
+            "last_name": "Johnson"
+        },
+        "variable_selections": {
+            "deductible": 500,
+            "asteroid_collision": 1000000
+        }
+    }
+}

@@ -1,0 +1,14 @@
+POST https://fed-challenge-api.sure.now.sh/api/v1/quotes
+Content-Type: application/json
+
+{
+	"first_name": "Prairie",
+	"last_name": "Johnson",
+	"address": {
+		"line_1": "123 Mulberry Lane",
+		"line_2": "3B",
+		"city": "Brooklyn",
+		"region": "NY",
+		"postal": "11211"
+	}
+}
