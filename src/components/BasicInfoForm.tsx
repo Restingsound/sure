@@ -37,7 +37,8 @@ const BasicInfoForm = () => {
       addressLine1 &&
       addressCity &&
       addressRegion &&
-      addressPostal
+      addressPostal &&
+      Number.isInteger(parseInt(addressPostal, 10))
     ) {
       const content = {
         first_name: firstName,
@@ -97,7 +98,10 @@ const BasicInfoForm = () => {
     if (fieldName == "address_region")
       return touched["address_region"] && !addressRegion;
     if (fieldName == "address_postal")
-      return touched["address_postal"] && !addressPostal;
+      return (
+        touched["address_postal"] &&
+        !Number.isInteger(parseInt(addressPostal, 10))
+      );
   };
 
   return (
@@ -188,7 +192,10 @@ const BasicInfoForm = () => {
               size="small"
               error={hasError("address_postal")}
               onChange={handleTextFieldChange}
-              helperText={hasError("address_postal") && "Zip Code is Required"}
+              helperText={
+                hasError("address_postal") &&
+                "Zip Code is Required and Must be a Number"
+              }
             />
           </div>
         </div>
