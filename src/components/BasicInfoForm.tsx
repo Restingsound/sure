@@ -56,48 +56,48 @@ const BasicInfoForm = () => {
   };
 
   const handleTextFieldChange = (event: any) => {
-    if (event.target.id == "first_name") {
+    if (event.target.id === "first_name") {
       setFirstName(event.target.value);
       setTouched({ ...touched, first_name: true });
     }
-    if (event.target.id == "last_name") {
+    if (event.target.id === "last_name") {
       setLastName(event.target.value);
       setTouched({ ...touched, last_name: true });
     }
-    if (event.target.id == "address_line_1") {
+    if (event.target.id === "address_line_1") {
       setAddressLine1(event.target.value);
       setTouched({ ...touched, address_line_1: true });
     }
-    if (event.target.id == "address_line_2") {
+    if (event.target.id === "address_line_2") {
       setAddressLine2(event.target.value);
       setTouched({ ...touched, address_line_2: true });
     }
-    if (event.target.id == "address_city") {
+    if (event.target.id === "address_city") {
       setAddressCity(event.target.value);
       setTouched({ ...touched, address_city: true });
     }
-    if (event.target.id == "address_region") {
+    if (event.target.id === "address_region") {
       setAddressRegion(event.target.value);
       setTouched({ ...touched, address_region: true });
     }
-    if (event.target.id == "address_postal") {
+    if (event.target.id === "address_postal") {
       setAddressPostal(event.target.value);
       setTouched({ ...touched, address_postal: true });
     }
   };
 
   const hasError = (fieldName: string) => {
-    if (fieldName == "first_name") return touched["first_name"] && !firstName;
-    if (fieldName == "last_name") return touched["last_name"] && !lastName;
-    if (fieldName == "address_line_1")
+    if (fieldName === "first_name") return touched["first_name"] && !firstName;
+    if (fieldName === "last_name") return touched["last_name"] && !lastName;
+    if (fieldName === "address_line_1")
       return touched["address_line_1"] && !addressLine1;
-    if (fieldName == "address_line_2")
+    if (fieldName === "address_line_2")
       return touched["address_line_2"] && !addressLine2;
-    if (fieldName == "address_city")
+    if (fieldName === "address_city")
       return touched["address_city"] && !addressCity;
-    if (fieldName == "address_region")
+    if (fieldName === "address_region")
       return touched["address_region"] && !addressRegion;
-    if (fieldName == "address_postal")
+    if (fieldName === "address_postal")
       return (
         touched["address_postal"] &&
         !Number.isInteger(parseInt(addressPostal, 10))
